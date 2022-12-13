@@ -1,0 +1,12 @@
+include mixins
+
+block content
+    .ui.middle.aligned.center.aligned.grid
+        .six.wide.column
+            form.ui.large.form(method="post", action="/result")
+                .ui.stacked.segment
+                    +field('email', 'email', 'your.email@address.tld')
+                    +field('password', 'password', 'password')
+                    button(type="submit").ui.fluid.large.teal.submit.button envoyer
+
+                .ui.error.message
